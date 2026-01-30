@@ -16,7 +16,6 @@ function App() {
       }}>
         {/* 1. The Brochure Image */}
         <img src='Gemini_Generated_Image_1.png' style={{borderRadius: '10px', width: '500px', height: 'auto', marginBottom: '30px'}}/>
-
         {/* 2. MAIN TITLE - Changed to h1 for better accessibility */}
         <h1 style={{fontSize: '4rem', textAlign: 'center', margin: '20px 0', width: '100%'}}>
           Oral Language: The Foundation for Early Spelling and Writing
@@ -103,3 +102,6 @@ function App() {
 }
 
 export default App
+
+
+/////////
