@@ -13,10 +13,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # This is the magic part that fixes the 'flyer/flyer' issue
-    defaults:
-      run:
-        working-directory: ./flyer 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,19 +22,22 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          # Tells it where the lock file is for caching
+          # Points to the lock file inside the nested folder
           cache-dependency-path: './flyer/package-lock.json'
 
       - name: Install dependencies
+        # This tells GitHub to go inside the 'flyer' folder first
+        working-directory: ./flyer
         run: npm install
 
       - name: Build
+        working-directory: ./flyer
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Points to the build folder inside the subfolder
+          # Tells GitHub the finished site is in flyer/dist
           path: ./flyer/dist
 
   deploy:
