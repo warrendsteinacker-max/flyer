@@ -2,9 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # Ensure this matches your default branch name
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -24,17 +22,22 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
+          # Points to the lock file inside your subfolder
+          cache-dependency-path: './flyer/package-lock.json'
 
       - name: Install dependencies
+        working-directory: ./flyer
         run: npm install
 
       - name: Build
+        working-directory: ./flyer
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # Vite builds to the 'dist' folder by default
+          # Tells GitHub to upload the dist folder from inside flyer
+          path: ./flyer/dist
 
   deploy:
     environment:
