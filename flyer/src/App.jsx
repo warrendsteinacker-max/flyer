@@ -1,0 +1,107 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <div style={{
+        display: 'flex', 
+        flexDirection: 'column', 
+        alignItems: 'center', 
+        padding: '20px',
+        boxSizing: 'border-box',
+        width: '100%' // Ensures the container takes full screen width
+      }}>
+        {/* 1. The Brochure Image */}
+        <img src='Gemini_Generated_Image_1.png' style={{borderRadius: '10px', width: '500px', height: 'auto', marginBottom: '30px'}}/>
+
+        {/* 2. MAIN TITLE - Changed to h1 for better accessibility */}
+        <h1 style={{fontSize: '4rem', textAlign: 'center', margin: '20px 0', width: '100%'}}>
+          Oral Language: The Foundation for Early Spelling and Writing
+        </h1>
+
+        {/* 3. SUB-HEADING 1 */}
+        <h2 style={{fontSize: '2.5rem', border: '10px solid black', width: '90%', textAlign: 'center', padding: '10px', margin: '20px 0'}}>
+          Introduction: Why Talking Builds Writers
+        </h2>
+
+        {/* 4. PARAGRAPHS - Kept inside their own width-controlled div */}
+        <div style={{width: '80%', marginBottom: '40px'}}>
+          <p style={{color: 'black', fontSize: '1.2rem', marginBottom: '15px'}}>Oral language is the bedrock upon which all literacy skills are built. Before children can spell or write, they must first develop a strong foundation in spoken language. Research consistently demonstrates that phonological “awareness is an umbrella term that refers to an awareness of the different units of sounds in oral language" (Tompkins et al., 2021, p. 108). When children engage in rich oral language experiences, they develop the phonological awareness, vocabulary, and narrative skills essential for spelling and composing written texts.</p>
+          <p style={{color: 'black', fontSize: '1.2rem'}}>The connection between speaking and writing is direct and powerful. As children learn the alphabetic principle, "they realize that the sounds (phonemes) they hear in oral language can be represented by letters (graphemes) in print" (Tompkins et al., 2021, p. 107). This understanding transforms speech into print. Furthermore, when children narrate their experiences orally, they practice organizing ideas in logical sequences—a skill that directly transfers to written composition. Every conversation, story, and word game strengthens the neural pathways that support literacy development.</p>
+        </div>
+
+        {/* 5. REMAINING HEADINGS - Stacking below the paragraphs */}
+        <h2 style={{fontSize: '2.5rem', border: '10px solid black', width: '90%', textAlign: 'center', padding: '10px', margin: '20px 0'}}>
+          Home Language as a Strength
+        </h2>
+
+        <div style={{width: '80%', marginBottom: '40px'}}>
+          <p style={{color: 'black', fontSize: '1.2rem', marginBottom: '15px'}}>1. Telling Family Stories </p>
+          <p style={{color: 'black', fontSize: '1.2rem'}}>
+          Encourage your child to share stories from your family's history, traditions, or daily experiences in your home language. This practice builds narrative structure—the ability to sequence events with a beginning, middle, and end. During "the last 40 minutes of the reading period, Mrs. Firpo conducts guided reading lessons" (Tompkins et al., 2021, p. 106). Similarly, families can conduct guided storytelling during meals or bedtime, helping children organize their thoughts before transferring them to paper.</p>
+        </div>
+
+        <div style={{width: '80%', marginBottom: '40px'}}>
+          <p style={{color: 'black', fontSize: '1.2rem', marginBottom: '15px'}}>2. Brainstorming Ideas in Home Language </p>
+          <p style={{color: 'black', fontSize: '1.2rem'}}>
+          Before your child writes, allow them to talk through their ideas in whichever language feels most comfortable. Mrs. Firpo's students take turns using their letter-sound knowledge to sound out these words: my, fish, can, at, and me.  Mrs. Firpo “guides the students to say each word slowly and listen to the sound” (Tompkins et al., 2021, p. 106). Just as Mrs. Firpo's students use what they know to build new learning, children who discuss concepts in their home language develop clearer, more sophisticated ideas that they can then express in writing in any language.</p>
+        </div>
+
+        <div style={{width: '80%', marginBottom: '40px'}}>
+          <p style={{color: 'black', fontSize: '1.2rem', marginBottom: '15px'}}>3. Using Bilingual Labels </p>
+          <p style={{color: 'black', fontSize: '1.2rem'}}>Create labels for objects around your home in both your home language and English. This practice demonstrates that "letters represent sounds" (Tompkins et al., 2021, p. 107). This can be applied across all languages and helps children see the connections between oral and written words. Place labels on doors, furniture, food items, and toys, and read them together regularly, pointing out how sounds in words are represented by letters.</p>
+        </div>
+
+
+
+        <h2 style={{fontSize: '2.5rem', border: '10px solid black', width: '90%', textAlign: 'center', padding: '10px', margin: '20px 0'}}>
+          Simple, No-Cost Activities for Home
+        </h2>
+
+        <div style={{width: '80%', marginBottom: '40px'}}>
+          <p style={{color: 'black', fontSize: '1.2rem', marginBottom: '15px'}}>Activity 1: Narrate Daily Routines</p>
+          <p style={{color: 'black', fontSize: '1.2rem'}}>Talk through everyday tasks as you do them together. While cooking, say: "First, we're cracking two eggs. Listen to that /k/ sound at the beginning of crack!" During dressing, comment: "We're pulling on your red socks—red and socks both have short vowel sounds." This running commentary builds vocabulary and draws attention to the sounds in words. As suggested by Tompkins et al. (2021) on page 109,  developing phonological awareness, particularly an awareness of phonemes, is considered an essential and foundational to developing an understanding that letters represent sounds in language and, vice versa, that sounds are represented by letters.</p>
+        </div>
+
+        <div style={{width: '80%', marginBottom: '40px'}}>
+          <p style={{color: 'black', fontSize: '1.2rem', marginBottom: '15px'}}>Activity 2: Play Oral Sound Games That can be Played in a Array of languages From The Book I Gave out</p>
+          <p style={{color: 'black', fontSize: '1.2rem'}}>Engage in "I Spy" using the beginning sounds: "I spy something starting with /m/." Clap out syllables in family members' names. Play rhyming games: "What rhymes with cat?" These activities develop phonemic awareness—the ability to hear and manipulate individual sounds in words. "The largest units of sound within words are syllables" (Tompkins et al., 2021, p. 108).  If students can blend phonemes, then they can recognize the phonics portion of the lesson. Breaking words into syllables helps children understand word structure, which directly supports spelling development.</p>
+        </div>
+
+        <div style={{width: '80%', marginBottom: '40px'}}>
+          <p style={{color: 'black', fontSize: '1.2rem', marginBottom: '15px'}}>Activity 3: Sing and Rhyme Together</p>
+          <p style={{color: 'black', fontSize: '1.2rem'}}>Sing songs, nursery rhymes, or cultural chants from your family's heritage. Students “who can be heard playing with rhyming words, even sometimes making up words so they rhyme, have developed a sensitivity to rhymes, a medium size unit of sound that occurs in spoken language" (Tompkins et al., 2021, p. 108). The rhythm and repetition in songs help children notice patterns in language, which is a critical skill for both spelling and reading.</p>
+        </div>
+
+        <div style={{width: '80%', marginBottom: '40px'}}>
+          <p style={{color: 'black', fontSize: '1.2rem', marginBottom: '15px'}}>Activity 4: Tell and Retell Stories</p>
+          <p style={{color: 'black', fontSize: '1.2rem'}}>Ask your child to retell a favorite book, movie, or event from their day. Prompt them with questions: "What happened first? Then what? How did it end?" This practice builds narrative structure and vocabulary. To further support this activity's effectiveness, before children can spell words, they must first be able to talk about their experiences with those words in meaningful contexts. Story retelling provides this essential bridge between oral language and written composition.</p>
+        </div>
+
+        <h2 style={{fontSize: '2.5rem', border: '10px solid black', width: '90%', textAlign: 'center', padding: '10px', margin: '20px 0'}}>
+          The Research-Practice Connection
+        </h2>
+
+        <div style={{width: '80%', marginBottom: '40px'}}>
+          <p style={{color: 'black', fontSize: '1.2rem', marginBottom: '15px'}}>The activities and strategies in this flyer are grounded in literacy research, as suggested by Tomkins et al. (2021). The alphabetic principle, understanding that letters represent sounds, cannot be mastered without strong phonological awareness. Similarly, writing development depends on a child's ability to segment words into syllables and sounds through their oral language experiences.</p>
+          <p style={{color: 'black', fontSize: '1.2rem'}}>When families engage in these talk-rich activities, they create what researchers call a literacy-rich environment without spending a penny. Every conversation, every song, and every story builds the oral language foundation that transforms into spelling knowledge and writing ability.</p>
+        </div>
+
+        <h2 style={{fontSize: '2.5rem', borderBottom: '10px solid black', width: '90%', textAlign: 'center', padding: '10px', margin: '40px 0'}}>
+          References
+        </h2>
+
+        <div style={{width: '80%', marginBottom: '40px'}}>
+          <p style={{color: 'black', fontSize: '1.2rem', marginBottom: '15px'}}>Tompkins, G. E., Campbell, R., Green, D., & Smith, C. (2021). Literacy for the 21st century: A balanced approach (3rd Canadian ed.). Pearson</p>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default App
